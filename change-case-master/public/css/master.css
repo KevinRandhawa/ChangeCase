@@ -1,0 +1,51 @@
+/*h1,h2,h3,h4,h5,h6,p,body {
+  color: #C8C8C8
+}*/
+
+/*.body {
+  background: #272B30
+}*/
+
+.title {
+  background: #1C1E22
+}
+
+.string {
+  width: 530px;
+  height: 30px;
+  border-radius: 5px;
+  margin: 17px 0 17px 0;
+  padding: 0 15px;
+}
+
+.results {
+  display:inline;
+  margin-top: 30px;
+  background: #1C1E22;
+  padding: 12px;
+  border-radius: 7px;
+  color: white;
+}
+
+.addword {
+  width: 200px;
+  height: 35px;
+  border-radius: 3px;
+  padding: 12px;
+  font: 35px;
+}
+
+.wordlist {
+  font-size: 23px;
+}
+
+.wordlist:hover{
+  cursor: pointer;
+  color: #FF7777;
+}
+
+.description {
+  width: 550px;
+  margin: auto;
+  font-size: 17px;
+}

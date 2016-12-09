@@ -1,0 +1,16 @@
+<div>
+  <h1>Change Case</h1>
+  <form ng-submit=log()>
+      <input ng-model=string />
+      <button type='submit' ng-click='lowerCase()'>Lowercase</button>
+      <button type='submit' ng-click='upperCase()'>Uppercase</button>
+      <button type='submit' ng-click='capitalCase()'>Capital case</button>
+      <button type='submit' ng-click='camelCase()'>Camel case</button>
+      <button type='submit' ng-click='removeSpaces()'>Remove Spaces</button>
+  </form>
+
+  <p>
+    Result: {{string}}
+  </p>
+
+</div>

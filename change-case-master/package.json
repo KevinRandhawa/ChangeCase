@@ -1,0 +1,39 @@
+{
+  "name": "change-case",
+  "version": "1.0.0",
+  "description": "Changes case ",
+  "main": "nodeserver/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+#"
+  },
+  "author": "Kevin Randhawa",
+  "license": "ISC",
+  "bugs": {
+    "url": "#"
+  },
+  "homepage": "#",
+  "dependencies": {
+    "angular-ui-bootstrap": "^2.0.1",
+    "babel-core": "^6.13.2",
+    "babel-preset-es2015": "^6.13.2",
+    "babel-register": "^6.16.3",
+    "body-parser": "^1.15.2",
+    "cors": "^2.8.1",
+    "express": "^4.14.0",
+    "express-session": "^1.14.0",
+    "massive": "^2.4.0",
+    "passport": "^0.3.2",
+    "path": "^0.12.7",
+    "request": "^2.74.0"
+  },
+  "babel": {
+    "presets": [
+      "babel-preset-es2015"
+    ]
+  },
+  "devDependencies": {}
+}

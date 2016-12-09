@@ -1,0 +1,57 @@
+<div>
+    <ul class="nav nav-tabs">
+        <li style='float:right;' role="presentation"><a href='/auth'>Login</a></li>
+        <li style='margin:10px 10px; float:right;' role="presentation">Login to save capitalization of special words such as nouns</li>
+    </ul>
+
+    <div class='jumbotron'>
+        <h1 class='text-center'>Change Case</h1>
+
+        <h2 class='text-center' ng-if="user">Welcome Back {{user.displayName}}</h2>
+    </div>
+
+    <div class='text-center description'>
+      <p>Easily change the case of any text. If you have special words that need to be capitalized a certain way (e.g. Game of Thrones, The Walking Dead) then login to save words</p>
+    </div>
+
+    <div style='margin-bottom: 20px;' class='text-center' class='btn-group form-group' role='group' aria-label='...'>
+        <form ng-submit=log()>
+            <input ng-keydown='clearInput()' ng-click='clearInput()' autofocus class='string' ng-model=string />
+            <br/>
+            <button class="btn btn-default" type='submit' ng-click='lowerCase()'>Lowercase</button>
+            <button class="btn btn-default" type='submit' ng-click='upperCase()'>Uppercase</button>
+            <button class="btn btn-default" type='submit' ng-click='capitalCase()'>Capital case</button>
+            <button class="btn btn-default" type='submit' ng-click='camelCase()'>Camel case</button>
+            <button class="btn btn-default" type='submit' ng-click='removeSpaces()'>{{undoBtn}}</button>
+        </form>
+    </div>
+
+    <div style='margin-top:45px;' class='text-center'>
+        <h3 class='text-center results'>
+    {{string}}
+  </h3>
+    </div>
+
+    <div class='well' style='margin:45px auto; width: 350px;' ng-if="user">
+        <form class='text-center' ng-submit='addWord(noun)'>
+            <input class='addword' ng-model=noun />
+            <button class="btn btn-info" type='submit'>Add Noun</button>
+        </form>
+    </div>
+    <h4 ng-if='user' style='margin: 35px 0;' class='text-center'>
+            Status: {{status}}
+        </h4>
+
+    <div ng-if='' class="alert alert-dismissible alert-success">
+        <button type="button" class="close" data-dismiss="alert">&times;</button>
+        <strong>Well done!</strong> You successfully read <a href="#" class="alert-link">this important alert message</a>.
+    </div>
+
+    <div class='text-center' ng-if='user'>
+        <h2>Word Bank</h2>
+        <em style='color:darkgrey; margin-bottom: 40px;'>Click on word to remove</em>
+        <ul style='margin: 20px 45px 0 0; list-style: none;'>
+            <li ng-click="removeWord(word.word)" class='wordlist' ng-repeat='word in list'>{{word.word}}</li>
+        </ul>
+    </div>
+</div>
